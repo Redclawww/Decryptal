@@ -1,0 +1,639 @@
+/* <----------------------------- Fonts -----------------------------> */
+
+@font-face {
+    font-family: uncut sans regular;
+    src: url("https://uploads-ssl.webflow.com/638dce18f5ce022bbefdca6c/638dced565555a53a31db9e8_Uncut-Sans-Regular.otf");
+}
+@font-face {
+    font-family: uncut sans bold;
+    src: url("https://uploads-ssl.webflow.com/638dce18f5ce022bbefdca6c/63d39b3cd3ab191f6becb1eb_Uncut-Sans-Bold.otf");
+}
+@font-face {
+    font-family: uncut sans semibold;
+    src: url("https://uploads-ssl.webflow.com/638dce18f5ce022bbefdca6c/646ca528f0cb27c671490eda_Uncut-Sans-Semibold.otf");
+}
+@font-face {
+    font-family: uncut sans medium;
+    src: url("https://uploads-ssl.webflow.com/638dce18f5ce022bbefdca6c/638dcedbbf262eab9332e5e8_Uncut-Sans-Medium.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: uncut sans regular;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #0D0C11;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* <----------------------------- Chat Box -----------------------------> */
+
+.chat{
+    cursor: pointer;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background-color: #41baf7;
+    border-radius: 50%;
+    padding: 12px;
+    z-index: 5;
+}
+
+.chat-icon{
+    position: relative;
+}
+
+.close-icon{
+    position: absolute;
+    right: -4px;
+    height: 50px;
+    visibility: hidden;
+}
+
+.chat:hover{
+    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1));
+}
+
+.chat-box{
+    visibility: hidden;
+    border: 2px solid #40bbf7;
+    box-shadow: 0 20px 40px -5px rgba(85, 94, 105, .25);
+    border-radius: 32px;
+    text-align: center;
+    background-color: #0d0c11;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    bottom: 55px;
+    right:30px;
+    padding: 3vh 1vw;
+    width: 22vw;
+    z-index: 3;
+}
+
+.chat-box>h2{
+    font-family: uncut sans medium;
+    font-weight: 100;
+}
+
+.chat-box>p{
+    padding: 0 1rem;
+    color: #A3A1AA;
+}
+
+.chat-box-inner{
+    border-radius: .8rem;
+    background-color: #1e1d28;
+    display: flex;
+    align-items: center;
+    padding: 2vh 1.5vw;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}   
+
+.chat-box-inner-content-p{
+    color: #A3A1AA;
+}
+
+.chat-box img{
+    height: 50px;
+}
+
+/* <----------------------------- Nav Bar -----------------------------> */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 3vh 3vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);  
+    z-index: 9;  
+}
+
+nav img{
+    height: 30px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+nav ul button{
+    padding: 15px 20px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid grey;
+    background: transparent;
+    font-size: 1rem;
+}
+
+.Launch-app__btn{
+    background-color: #CBE703;
+    color: black;
+}
+
+/* <----------------------------- Page1 -----------------------------> */
+
+.page1{
+    margin-top: 5rem;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1 img{
+    object-fit: contain;
+    height: 50vh;
+}
+
+.page1 h1{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: uncut sans bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page1 p{
+    font-family: uncut sans regular;
+    margin-bottom: 20px;
+}
+
+.page1>button{
+    padding: 15px 25px;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1.5rem;
+    border: none;
+}
+
+/* <----------------------------- Page2 -----------------------------> */
+
+.page2{
+
+    position: relative;
+    width: 100vw;
+    padding-top: 15vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.card1,.card2{
+    scale: .8;
+    background-color: #15141B;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border: .5px solid #242329;
+}
+
+.card-content{
+    padding: 3rem 3rem;
+    font-size: 1.5rem;
+}
+
+.card1 img{
+    object-fit: contain;
+    overflow: hidden;
+    width: 40vw;
+}
+
+.card2 img{
+    overflow: hidden;
+    width:40vw;
+    object-fit: contain;
+    border: 0 solid #444;
+    border-radius: 30px;
+}
+
+.card-content h1{
+    font-family: uncut sans semibold;
+    margin-bottom: 15px;
+}
+
+.card-content p{
+    font-size: 1.2rem;
+}
+
+.card3{
+    display: flex;
+    gap: 1.5vw;
+}
+
+.card3-left{
+    scale: 0.8;
+    background-color: #e0ff05;
+    background-image: url("https://uploads-ssl.webflow.com/638dce18f5ce022bbefdca6c/64b809033b0a29abb09aa4f6_Ellipse%2015.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    border-radius: 2rem;
+    width: 39.25vw;
+
+    
+}
+.card3-right{
+    scale: .8;
+    background-image: url("https://uploads-ssl.webflow.com/638dce18f5ce022bbefdca6c/6478360e458c23ab13f3b348_Mask%20group.png");
+    background-position: 50%;
+    background-size: cover;
+    border: .5px solid #242329;
+    border-radius: 2rem;
+    width: 39.25vw;
+    background-color: #15141B;
+}
+
+.card3-left-content{
+    padding: 3rem 3rem;
+    
+}
+
+.card3-left-content h1{
+    color: #000;
+    font-size: 3rem;
+    font-family: uncut sans semibold;
+}
+
+.card3-left-content p{
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.card3-right h1{
+    font-size: 3rem;
+    font-family: uncut sans semibold;
+    padding: 3rem 3rem;
+}
+
+
+
+.card4{
+    position: relative;
+    padding: 3rem 3rem;
+    margin: 1.5rem 0;
+    width: 90vw;
+    background-color: #15141B;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: .5px solid #242329;
+}
+
+
+/* <----------------------------- Page3 -----------------------------> */
+
+
+.page3{
+    overflow: hidden;
+    padding: 7vh 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    height: 100vh;
+    width: 100vw;
+    background-color: #B1A7EB;
+}
+
+.page3 h1{
+    transform: translateY(50);
+    text-align: center;
+    font-size: 3rem;
+    color: #000;
+    font-family: uncut sans semibold;
+}
+
+.nexus-mutual{
+    scale: .8;
+    position: relative;
+    display: flex;
+    border-radius: 2rem;
+    border: .5px solid #242329;
+    height: 70vh;
+    background-color: red;
+    background-color: #1e1d28;
+    background-image: url("https://uploads-ssl.webflow.com/638dce18f5ce022bbefdca6c/64917cd3843009bf006c7f73_Mask%20group.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.empty-elem{
+    color: red;
+    height: 100%;
+    width: 60%;
+}
+.list-elem{
+    margin: 1rem 0;
+    padding: 1.5rem 1.5rem;
+    background-color: #282735;
+    border-radius: 2rem;
+}
+
+.list-elem>p{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.list-item{
+    padding: .5rem .5rem;
+    border-bottom: 1px solid #3B414B;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.list-item>h1{
+    color: #B1A7EB;
+}
+
+.coverage{
+    height: 60%;
+    background-color: #CBE703;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+    border-radius: 2rem;
+    margin: 1rem 1rem;
+    padding: 1.5rem 1.5rem;
+}
+
+.coverage p{
+    font-size: 1.2rem;
+    color: black;
+}
+.coverage h1{
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+.last-elem a{  
+    height: 30%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #3B414B;
+    border-radius: 2rem;
+    margin: 0 1rem;
+}
+
+.last-elem a::hover{
+    border-color: #fff;
+}
+
+/* <----------------------------- Page4 -----------------------------> */
+
+.page4{
+    overflow: hidden;   
+    position: relative;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.faq{
+    overflow: hidden;
+    font-weight: 100;
+    border-radius: 2rem;
+    display: flex;
+    gap: 10rem;
+    background-color: #15141B;
+    padding:  5vh 5vw;
+    margin:7vh 5vw;
+}
+
+.faq>h1{
+    font-family: uncut sans semibold;
+    width: 40%;
+    font-size: 2.7rem;
+
+}
+
+.wrapper {
+    width: 100%;
+  }
+
+.container {
+    position: relative;
+    background:transparent;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid #3B414B;
+    margin: 20px 0;
+  }
+  
+.question {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 20px 80px 20px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+.question::after {
+    content: "\002B";
+    color: #B1A7EB;
+    font-size: 2.2rem;
+    position: absolute;
+    right: 20px;
+    transition: 0.2s;
+  }
+  
+.question.active::after {
+    transform: rotate(45deg);
+  }
+  
+.answercont {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  
+.answer {
+    color: #828284;
+    font-size: 1.18rem;
+    padding: 0 20px 20px;
+    line-height: 1.5rem;
+  }
+  
+/* <----------------------------- Footer -----------------------------> */
+
+.footer{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer-elem-right{
+    display: flex;
+    gap: 1.5vw;
+}
+
+.footer-elem-right img{
+    height: 20px;
+}
+
+.footer-elem{
+    padding: 5vh 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-elem ul{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+}
+
+.footer img{
+    margin-bottom: 2rem;
+    object-fit: contain;
+    height: 30px;
+}
+
+/* <----------------------------- Media Queries-----------------------------> */
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .chat-box{
+        width: 100%;
+        right: 0;
+    }
+    .page1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .page1 p{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .page1 img{
+        width: 100vw;
+    }
+    .faq{
+        flex-direction: column;
+        
+    }
+    .card1{
+    
+        flex-direction: column-reverse;
+    }
+    .card1>img{
+        width: 100%;
+    }
+
+    .card2{
+    
+        flex-direction: column-reverse;
+    }
+    .card2>img{
+        width: 100%;
+    }
+
+    .card3{
+        position: relative;
+        flex-direction: column;
+        gap: 2rem;
+        height: fit-content;
+    }
+    .card3-left{
+        width: 80vw;
+    }
+
+    .card3-right{
+        width: 80vw;
+        height: fit-content;
+    }
+    .card4 p{
+        font-size: 2rem;
+    }
+    .card4{
+        width:80vw;
+        flex-direction: column;
+        gap: 1rem;
+        height: fit-content;
+        margin-top: 0;
+    }
+    .page3{
+        padding: 0;
+        height: fit-content;
+        border-radius: 2rem;
+    }
+    .page3 h1
+    {   
+        font-size: 2.5rem;
+        text-align: left;
+        padding: 4vh 4vw;
+    }
+    .nexus-mutual{
+        flex-direction: column;
+        height: fit-content;
+        padding: 5vh 0;
+        width: 100vw;
+    }
+    .list-elem{
+        margin-top: 30rem;
+    }
+    .list-item p{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .wrapper{
+        width: 100%;
+        
+    }
+    .faq h1{
+        width: 100%;
+    }
+    .faq{
+        gap: 0;
+    }
+    .chat-box-inner{
+        width: 90%;
+        border-radius: 2rem;
+    }
+}
+
+  
