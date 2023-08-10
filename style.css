@@ -153,7 +153,9 @@ nav ul button{
     background: transparent;
     font-size: 1rem;
 }
-
+nav p:hover{
+    color: #CBE703;
+}
 .Launch-app__btn{
     background-color: #CBE703;
     color: black;
@@ -522,6 +524,10 @@ nav ul button{
     align-items: center;
     gap: 3rem;
     list-style: none;
+}
+
+.footer li:hover{
+    color: #CBE703;
 }
 
 .footer img{
